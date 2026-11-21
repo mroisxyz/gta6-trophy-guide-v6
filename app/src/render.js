@@ -24,6 +24,7 @@ export function renderAuditStrip(figures) {
     figures.cited + '/' + figures.claims + ' claims cited',
     figures.guidesCiting + '/55 guides cite sources',
     figures.backedByTwo + ' backed by 2+ sources',
+    figures.collectiblesLogged + ' collectibles logged',
   ].join(' <span class="sep">·</span> ');
   const rowTwo = [
     figures.pages + ' pages · ' + figures.sites + ' sites read ' + figures.compiled,

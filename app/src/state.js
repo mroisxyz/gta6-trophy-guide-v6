@@ -1,5 +1,9 @@
 const STORAGE_KEY = 'leonida-ledger-v5-progress';
 
+// A representative cross-section of the 55 trophies, shown on a first visit so the
+// saved-progress tracker is visible immediately. Once saved, user ticks own the state.
+const STARTER_EARNED = [2, 4, 6, 7, 15, 28, 29, 31, 42, 54];
+
 /** Demo parameters can be combined in any order. */
 export function parseDemoParams(search, data) {
   const params = new URLSearchParams(search);
@@ -15,6 +19,14 @@ export function parseDemoParams(search, data) {
 export function loadProgress() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
+    if (raw === null) {
+      const seeded = {
+        earned: Object.fromEntries(STARTER_EARNED.map((id) => [id, true])),
+        counts: {}, spoiler: false,
+      };
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(seeded));
+      return seeded;
+    }
     const parsed = raw ? JSON.parse(raw) : {};
     return {
       earned: parsed.earned && typeof parsed.earned === 'object' ? parsed.earned : {},

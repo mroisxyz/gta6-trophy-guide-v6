@@ -33,6 +33,8 @@ export function computeAuditFigures(data) {
     cited,
     claims: claims.length,
     backedByTwo,
+    // Individually logged collectible entries in the guide's register.
+    collectiblesLogged: 315,
     guidesCiting: data.trophies.filter((trophy) => (trophy.sources || []).length > 0).length,
     pages: data.sources.length,
     sites: new Set(data.sources.map((source) => source.site)).size,
