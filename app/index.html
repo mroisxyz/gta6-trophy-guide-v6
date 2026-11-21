@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Ledger — GTA VI trophy audit & tracker</title>
+<link rel="stylesheet" href="./style.css">
+<script type="module" src="./app.js"></script>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><b>LEONIDA LEDGER</b><span>GTA VI · PS5 · CITATION-FIRST TROPHY AUDIT</span></div>
+  <div class="topstats" id="progressLine">0/55 earned</div>
+  <div class="topactions">
+    <button id="spoilerBtn">Spoiler shield: OFF</button>
+    <button id="exportBtn">Export</button>
+    <label class="import">Import<input type="file" id="importInput" accept="application/json"></label>
+  </div>
+  <div class="saved">saved in this browser · localStorage</div>
+</header>
+<section class="audit" id="auditStrip" aria-label="Audit strip"></section>
+<nav class="tabs" id="tabs" aria-label="Ledger views">
+  <button data-view="tracker" class="on">Tracker</button>
+  <button data-view="roadmap">Roadmap</button>
+  <button data-view="missables">Missables</button>
+  <button data-view="sources">Sources</button>
+  <span class="tabnote">55 / 55 official · 366 cited claims · 26 disputes · no runtime network</span>
+</nav>
+<main class="workspace">
+  <aside class="left" id="leftRail"></aside>
+  <section class="center" id="centerPane"></section>
+  <section class="detail" id="detailPane"></section>
+  <aside class="next" id="nextRail"></aside>
+</main>
+<footer class="foot">LEONIDA LEDGER · compiled 20 Nov 2026 · 57 pages / 19 sites · source URLs are anchors only · no Rockstar artwork</footer>
+</body>
+</html>
